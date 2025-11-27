@@ -30,8 +30,19 @@ else
   THRESHOLD=5500
 fi
 
-INT_MIN=-2147483648
-INT_MAX=2147483647
+# Get INT_MIN from $3, fallback to -2147483648
+if [ -n "$3" ] && [[ "$3" =~ ^[0-9]+$ ]]; then
+  INT_MIN=$3
+else
+  INT_MIN=-2147483648
+fi
+
+# Get INT_MAX from $4, fallback to 2147483647
+if [ -n "$4" ] && [[ "$4" =~ ^[0-9]+$ ]]; then
+  INT_MAX=$4
+else
+  INT_MAX=2147483647
+fi
 
 # ------- Stats ------- #
 MAX_MOVES=0

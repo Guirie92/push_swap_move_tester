@@ -1,5 +1,4 @@
 #!/bin/bash
-set -u
 
 # ------- Config ------- #
 EXEC="./push_swap"
@@ -29,6 +28,7 @@ if [ "$ARRAY_SIZE" -le 100 ]; then
   THRESHOLD=700
 else
   THRESHOLD=5500
+fi
 
 INT_MIN=-2147483648
 INT_MAX=2147483647
